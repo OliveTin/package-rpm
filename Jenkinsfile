@@ -17,7 +17,7 @@ pipeline {
 			sh 'cp OliveTin*.tar.gz ~/rpmbuild/SOURCES/'
             sh 'make'
 	
-			archiveArtifacts artifacts: '~/rpmbuild/RPMS/*.rpm', fingerprint: false
+			archiveArtifacts artifacts: '/root/rpmbuild/RPMS/*.rpm', fingerprint: false
           }
       }
   }
