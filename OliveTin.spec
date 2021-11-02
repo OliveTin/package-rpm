@@ -22,7 +22,7 @@ Use cases
   
 %build
 mkdir -p %{buildroot}/etc/OliveTin/
-cp configs/config.yaml %{buildroot}/etc/OliveTin/
+cp config.yaml %{buildroot}/etc/OliveTin/
 
 mkdir -p %{buildroot}/usr/local/sbin/
 cp OliveTin %{buildroot}/usr/local/sbin/
