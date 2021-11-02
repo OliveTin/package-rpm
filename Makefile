@@ -1,2 +1,2 @@
 build:
-  rpmbuild -ba OliveTin.spec
+    rpmbuild -ba OliveTin.spec
