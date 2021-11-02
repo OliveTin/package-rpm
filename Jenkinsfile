@@ -13,11 +13,10 @@ pipeline {
 
 			copyArtifacts(projectName: "/OliveTin/OliveTin-rc-builder/main", filter: "dist/OliveTin-*linux-amd64.tar.gz", flatten: true)
 
-			sh 'rm -rf ~/rpmbuild/ && mkdir -p ~/rpmbuild/SOURCES/'
-			sh 'cp OliveTin*.tar.gz ~/rpmbuild/SOURCES/'
+			sh 'mkdir SOURCES && cp OliveTin*.tar.gz ./SOURCES/'
             sh 'make'
 	
-			archiveArtifacts artifacts: '/root/rpmbuild/RPMS/x86_64/**.rpm', fingerprint: false
+			archiveArtifacts artifacts: 'RPMS/x86_64/**.rpm', fingerprint: false
           }
       }
   }
